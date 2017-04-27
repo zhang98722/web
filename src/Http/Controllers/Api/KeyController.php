@@ -218,11 +218,11 @@ class KeyController extends Controller
     public function getDelete($key_id)
     {
 
-        ApiKeyModel::where('key_id', $key_id)
-            ->delete();
+        //ApiKeyModel::where('key_id', $key_id)
+        //    ->delete();
 
         return redirect()->back()
-            ->with('success', 'Key Successfully deleted');
+            ->with('success', '你没有删除API的权限，如果有问题请联系管理员');
 
     }
 
